@@ -2,36 +2,57 @@ name: Update Total Repo Count
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # runs daily at midnight UTC
-  workflow_dispatch:        # allows manual trigger
-  push:
-    branches:
-      - main
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:       # Manual trigger from Actions tab
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get total repo count (public + private)
-        id: repo_count
+      - name: Get repo count and update README
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          COUNT=$(gh api user --jq '.total_private_repos + .public_repos' 2>/dev/null || gh api user --jq '.public_repos')
-          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          # Fetch user data from GitHub API
+          RESPONSE=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/user")
 
-      - name: Update README badge
-        run: |
-          BADGE="![Total Repos](https://img.shields.io/badge/Total_Repos-${{ steps.repo_count.outputs.count }}-000000?style=for-the-badge\&logo=github\&logoColor=white)"
-          sed -i "s|!\[Total Repos\].*|${BADGE}|g" README.md
+          echo "API Response received"
 
-      - name: Commit and push if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git diff --quiet README.md || (git add README.md && git commit -m "chore: update total repo count" && git push)
+          # Extract repo counts
+          PUBLIC=$(echo "$RESPONSE" | grep -o '"public_repos":[0-9]*' | grep -o '[0-9]*')
+          PRIVATE=$(echo "$RESPONSE" | grep -o '"total_private_repos":[0-9]*' | grep -o '[0-9]*')
+
+          echo "Public repos: $PUBLIC"
+          echo "Private repos: $PRIVATE"
+
+          # Handle empty values
+          PUBLIC=${PUBLIC:-0}
+          PRIVATE=${PRIVATE:-0}
+
+          TOTAL=$((PUBLIC + PRIVATE))
+          echo "Total repos: $TOTAL"
+
+          # Update README badge
+          sed -i "s|Total_Repos-[0-9]*-|Total_Repos-${TOTAL}-|g" README.md
+
+          # Check if change was made
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update total repo count to ${TOTAL}"
+            git push
+            echo "README updated with $TOTAL repos"
+          fi
