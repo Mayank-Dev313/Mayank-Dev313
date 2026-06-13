@@ -65,7 +65,7 @@ const mayank = {
 
 <img src="https://github-readme-stats.vercel.app/api?username=Mayank-Dev313&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&hide_border=true&title_color=000000&icon_color=000000&text_color=333333&ring_color=000000" width="100%"/>
 
-![Total Repos](https://img.shields.io/badge/dynamic/json?label=Total%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FMayank-Dev313&style=for-the-badge&logo=github&logoColor=white&color=000000)
+![Total Repos](https://img.shields.io/badge/Total_Repos-Loading-000000?style=for-the-badge&logo=github&logoColor=white)
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mayank-Dev313&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000&currStreakLabel=000000&sideLabels=333333&dates=999999" width="100%"/>
 
@@ -130,6 +130,8 @@ const mayank = {
 
 Scan a physical photo frame → instantly play a video. No app needed — pure WebAR magic 🪄
 
+🔗 **[cardlive-ar.vercel.app](https://cardlive-ar.vercel.app/)**
+
 </td>
 <td width="50%" valign="top">
 
@@ -139,7 +141,7 @@ Scan a physical photo frame → instantly play a video. No app needed — pure W
 ![Status](https://img.shields.io/badge/Live-000000?style=flat-square&logoColor=white)
 ![Tech](https://img.shields.io/badge/CSS_·_HTML_·_JS-000000?style=flat-square&logoColor=white)
 
-Check it live 👉 **[mayank-tak.vercel.app](http://mayank-tak.vercel.app/)**
+🔗 **[mayank-tak.vercel.app](https://mayank-tak.vercel.app/)**
 
 </td>
 </tr>
@@ -154,6 +156,8 @@ Check it live 👉 **[mayank-tak.vercel.app](http://mayank-tak.vercel.app/)**
 
 Making tasks smarter, workflows faster.
 
+🔗 **[zeta-flow.vercel.app](https://zeta-flow.vercel.app/)**
+
 </td>
 <td width="50%" valign="top">
 
@@ -164,6 +168,8 @@ Making tasks smarter, workflows faster.
 ![Tech](https://img.shields.io/badge/HTML_·_CSS-000000?style=flat-square&logoColor=white)
 
 A clean, conversion-focused storefront page.
+
+🔗 **[chhavi-gifts.vercel.app](https://chhavi-gifts.vercel.app/)**
 
 </td>
 </tr>
