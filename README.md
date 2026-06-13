@@ -63,7 +63,9 @@ const mayank = {
 
 ### 📊 GitHub Stats
 
-<img src="https://github-readme-stats.vercel.app/api?username=Mayank-Dev313&show_icons=true&theme=transparent&hide_border=true&title_color=000000&icon_color=000000&text_color=333333&ring_color=000000" width="100%"/>
+<img src="https://github-readme-stats.vercel.app/api?username=Mayank-Dev313&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&hide_border=true&title_color=000000&icon_color=000000&text_color=333333&ring_color=000000" width="100%"/>
+
+![Total Repos](https://img.shields.io/badge/dynamic/json?label=Total%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FMayank-Dev313&style=for-the-badge&logo=github&logoColor=white&color=000000)
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mayank-Dev313&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000&currStreakLabel=000000&sideLabels=333333&dates=999999" width="100%"/>
 
