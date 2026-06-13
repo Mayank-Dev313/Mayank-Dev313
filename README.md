@@ -65,7 +65,8 @@ const mayank = {
 
 <img src="https://github-readme-stats.vercel.app/api?username=Mayank-Dev313&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&hide_border=true&title_color=000000&icon_color=000000&text_color=333333&ring_color=000000" width="100%"/>
 
-![Total Repos](https://img.shields.io/badge/Total_Repos-Loading-000000?style=for-the-badge&logo=github&logoColor=white)
+<!-- ✏️ UPDATE THIS NUMBER MANUALLY WHEN YOU ADD A NEW REPO -->
+![Total Repos](https://img.shields.io/badge/Total_Repos-5-000000?style=for-the-badge&logo=github&logoColor=white)
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mayank-Dev313&theme=transparent&hide_border=true&stroke=000000&ring=000000&fire=000000&currStreakLabel=000000&sideLabels=333333&dates=999999" width="100%"/>
 
@@ -84,10 +85,6 @@ const mayank = {
 <div align="center">
 
 ### 💼 What I Build
-
-</div>
-
-<div align="center">
 
 ![SaaS](https://img.shields.io/badge/⚙️_SaaS_Tools-000000?style=for-the-badge&logoColor=white)
 ![Web Dev](https://img.shields.io/badge/🌐_Custom_Web_Dev-000000?style=for-the-badge&logoColor=white)
@@ -223,16 +220,6 @@ A clean, conversion-focused storefront page.
 ### 📈 Activity
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mayank-Dev313&bg_color=00000000&color=000000&line=000000&point=000000&area=true&hide_border=true&area_color=00000010" width="95%"/>
-
-<br/>
-
-### 🐍 Contribution Snake
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mayank-Dev313/Mayank-Dev313/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mayank-Dev313/Mayank-Dev313/output/github-contribution-grid-snake.svg"/>
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/Mayank-Dev313/Mayank-Dev313/output/github-contribution-grid-snake-dark.svg" width="100%"/>
-</picture>
 
 </div>
 
